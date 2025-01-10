@@ -8,19 +8,29 @@
 class Card{
 
     public:
-    enum Suit {Hearts, Diamonds, Clubs, Spades};
-    enum Rank { Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Jack, Queen, King, Ace};
+    enum Suit {Hearts = 1, Diamonds, Clubs, Spades};
+    enum Rank { Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace};
     // enum Color {Red, Black};
 
+    //Constructors
     Card(Rank rank, Suit suit);
 
-    std::string toString() const;
+    //Accessors
+    Rank getRank() const;
+    Suit getSuit() const;
 
-    friend std::ostream& operator<<(std::ostream& os, Card& card);
+    //toString
+    std::string toString() const;
+    std::string rankToString() const;
+    std::string suitToString() const;
+
+    //operator overloading
+    friend std::ostream& operator<<(std::ostream& os, const Card& card);
 
     private:
-    Suit suit;
     Rank rank;
+    Suit suit;
+    
 
 };
 

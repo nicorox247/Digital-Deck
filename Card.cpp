@@ -2,25 +2,46 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-using namespace std;
 
+//Constructors
 Card::Card(Rank rank, Suit suit) : rank(rank), suit(suit) {}
 
-string Card::toString() const {
+//toString
+std::string Card::toString() const {
 
-    const string suits[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
-    const string ranks[] = {"Two", "Three", "Four", "Five", "Six", "Seven", 
-                            "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+    std::ostringstream result;
 
-    ostringstream result;
-
-    result << ranks[rank] << " of " << suits[suit];
+    result << rankToString() << " of " << suitToString();
     return result.str();
 }
 
-ostream& operator <<(ostream& os, Card& card){
+std::string Card::rankToString() const {
+
+    const std::string ranks[] = {"", "", "Two", "Three", "Four", "Five", "Six", "Seven", 
+                            "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
+    return ranks[rank];
+
+}
+
+std::string Card::suitToString() const {
+
+    const std::string suits[] = {"", "Hearts", "Diamonds", "Clubs", "Spades"};
+    return suits[suit];
+
+}
+
+std::ostream& operator <<(std::ostream& os, const Card& card){
 
     os << card.toString();
     return os;
 }
 
+//Accessors
+Card::Rank Card::getRank() const{
+
+    return rank;
+}
+Card::Suit Card::getSuit() const{
+
+    return suit;
+}
