@@ -6,6 +6,16 @@
 //Constructors
 Card::Card(Rank rank, Suit suit) : rank(rank), suit(suit) {}
 
+Card::Card(std::string rank, std::string suit){
+
+    
+}
+
+Card::Card(int rank, int suit){
+
+    
+}
+
 //toString
 std::string Card::toString() const {
 

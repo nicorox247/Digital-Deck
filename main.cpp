@@ -6,6 +6,7 @@ int main(){
 
     Card card1(Card::Ace, Card::Spades);
     Card card2(Card::Three, Card::Diamonds);
+    //Card card3(1, 3);
 
     cout << card1 << endl;
     cout << card1.toString() << endl;

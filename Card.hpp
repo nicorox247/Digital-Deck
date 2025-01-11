@@ -1,5 +1,5 @@
-#ifndef CARD_H
-#define CARD_H
+#ifndef CARD_HPP
+#define CARD_HPP
 
 #include <string>
 #include <iostream>
@@ -13,7 +13,9 @@ class Card{
     // enum Color {Red, Black};
 
     //Constructors
-    Card(Rank rank, Suit suit);
+    Card(Rank, Suit);
+    Card(std::string, std::string);
+    Card(int, int);
 
     //Accessors
     Rank getRank() const;
