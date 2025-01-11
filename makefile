@@ -6,7 +6,7 @@ CXXFLAGS = -Wall -std=c++17
 TARGET = test
 
 # Source and object files
-SRCS = main.cpp Card.cpp
+SRCS = main.cpp Card.cpp Deck.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Default target

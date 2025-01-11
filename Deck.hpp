@@ -12,11 +12,13 @@ class Deck{
     Card dealCard();
     void reset();
     bool isEmpty() const;
+    std::string toString();
 
 
     private:
     std::vector<Card> currentDeck;
     int card_count;
+    int deckIndex;
     std::vector<Card> dealtCards;
 };
 
