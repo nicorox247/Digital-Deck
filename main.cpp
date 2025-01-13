@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Card.hpp"
-#include "Deck.hpp"
+#include "Card/Card.hpp"
+#include "Deck/Deck.hpp"
 using namespace std;
 
 int main(){

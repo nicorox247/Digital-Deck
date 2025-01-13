@@ -6,7 +6,7 @@ CXXFLAGS = -Wall -std=c++17
 TARGET = test
 
 # Source and object files
-SRCS = main.cpp Card.cpp Deck.cpp
+SRCS = main.cpp Card/Card.cpp Deck/Deck.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Default target
@@ -22,7 +22,7 @@ $(TARGET): $(OBJS)
 
 # Clean up build files
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f *.o $(OBJS) $(TARGET)
 
 run: $(TARGET)
 	./$(TARGET)
