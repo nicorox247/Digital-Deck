@@ -1,8 +1,5 @@
-#include "Card/Card.hpp"
-#include "Deck/Deck.hpp"
-#include "BlackJack.hpp"
+#include "Blackjack.hpp"
 #include <iostream>
-#include <vector>
 
 Blackjack::Blackjack(){
 
@@ -65,5 +62,8 @@ void Blackjack::displayDealer(const std::vector<Card>& hand) const{
 
 void Blackjack::displayHand(const std::vector<Card>& hand) const{
 
+    for(auto c : hand){
 
+        std::cout << c << std::endl;
+    }
 }

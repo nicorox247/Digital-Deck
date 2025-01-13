@@ -1,8 +1,7 @@
 #ifndef BLACKJACK_HPP
 #define BLACKJACK_HPP
 
-#include "Card/Card.hpp"
-#include "Deck/Deck.hpp"
+#include "../Deck/Deck.hpp"
 #include <vector>
 
 class Blackjack{
@@ -13,7 +12,7 @@ class Blackjack{
     void play();
     
 
-    private:
+    //private:
     std::vector<Card> playerHand;
     std::vector<Card> dealerHand;
 
