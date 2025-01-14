@@ -13,20 +13,19 @@ class Blackjack{
     
 
     //private:
-    std::vector<Card> playerHand;
+    std::vector<std::vector<Card>> playerHands;
+    // std::vector<Card> singlePlayerHand;
     std::vector<Card> dealerHand;
 
-    std::vector<Card> player2Hand;
-    std::vector<Card> player3Hand;
-    std::vector<Card> player4Hand;
-    std::vector<Card> player5Hand;
     int players;
     Deck deck;
 
     bool isBust(const std::vector<Card>& hand) const;
     int handValue(const std::vector<Card>& hand) const;
     void displayDealer(const std::vector<Card>& hand) const;
-    void displayHand(const std::vector<Card>& hand) const;
+    void displayHand(const std::vector<Card>& hand, const std::string& name) const;
+    void playerTurn(int);
+    void dealerTurn();
 };
 
 #endif

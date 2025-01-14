@@ -30,14 +30,16 @@ int main(){
 
     Blackjack game = Blackjack();
 
-    vector<Card> hand = {Card(Card::Ace, Card::Spades), Card(Card::King, Card::Hearts)};
+    vector<Card> hand = {Card(Card::Three, Card::Spades), Card(Card::King, Card::Hearts)};
 
-    game.displayHand(hand);
+    game.displayHand(hand, "Nick");
 
     cout << game.handValue(hand) << endl;
 
     hand.emplace_back(Card::Ace, Card::Hearts);
 
-    game.displayHand(hand);
+    game.displayHand(hand, "Nick");
     cout << game.handValue(hand) << endl;
+
+    cout << game.isBust(hand) << endl;
 }
