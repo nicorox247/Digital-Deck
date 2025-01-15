@@ -26,6 +26,7 @@ class Blackjack{
     void displayHand(const std::vector<Card>& hand, const std::string& name) const;
     void playerTurn(int);
     void dealerTurn();
+    void determineWinners() const;
 };
 
 #endif

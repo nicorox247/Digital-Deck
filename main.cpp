@@ -26,20 +26,22 @@ int main(){
     // cout << "Dealing Card..." << endl;
     // cout << deck.dealCard() << endl;
 
-    Deck deck1 = Deck();
+    // Deck deck1 = Deck();
 
     Blackjack game = Blackjack();
 
-    vector<Card> hand = {Card(Card::Three, Card::Spades), Card(Card::King, Card::Hearts)};
+    // vector<Card> hand = {Card(Card::Three, Card::Spades), Card(Card::King, Card::Hearts)};
 
-    game.displayHand(hand, "Nick");
+    // game.displayHand(hand, "Nick");
 
-    cout << game.handValue(hand) << endl;
+    // cout << game.handValue(hand) << endl;
 
-    hand.emplace_back(Card::Ace, Card::Hearts);
+    // hand.emplace_back(Card::Ace, Card::Hearts);
 
-    game.displayHand(hand, "Nick");
-    cout << game.handValue(hand) << endl;
+    // game.displayHand(hand, "Nick");
+    // cout << game.handValue(hand) << endl;
 
-    cout << game.isBust(hand) << endl;
+    // cout << game.isBust(hand) << endl;
+
+    game.play();
 }
